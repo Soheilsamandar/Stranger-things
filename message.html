@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Message From The Upside Down</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="message-page">
+
+    <div class="fog"></div>
+
+    <div class="message-container">
+
+        <p class="small-title">A SECRET MESSAGE</p>
+
+        <h1>A MESSAGE FROM<br>THE UPSIDE DOWN</h1>
+
+        <p class="subtitle">
+            Something has been waiting for you...
+        </p>
+
+        <div class="envelope-wrapper" onclick="openLetter()">
+
+            <div class="envelope">
+
+                <div class="letter">
+
+                    <h2>To You</h2>
+
+                    <p>
+                        Happy Girl's day to the sweetest Girl
+                        may you always smile , dream big and never forget how special you are 
+                    </p>
+                    <p class="final-line">
+                        i love you my best koala 
+                    </p>
+
+                </div>
+
+                <div class="flap"></div>
+
+                <div class="envelope-front">
+                    <span>OPEN ME</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="click-text">
+            Click the envelope...
+        </p>
+
+        <a href="characters.html" class="back-button">
+            ← BACK
+        </a>
+
+    </div>
+
+
+    <script>
+
+        function openLetter() {
+
+            const envelope = document.querySelector(".envelope");
+
+            envelope.classList.toggle("open");
+
+        }
+
+    </script>
+
+</body>
+</html>

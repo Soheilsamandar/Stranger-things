@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hawkins Characters</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="characters-page">
+
+    <div class="page-dark"></div>
+
+
+    <!-- عنوان -->
+
+    <header class="characters-header">
+
+        <div class="mini-title">
+            HAWKINS • INDIANA
+        </div>
+
+        <h1>
+            THE HAWKINS
+            <span>CREW</span>
+        </h1>
+
+        <div class="red-line"></div>
+
+        <p>
+            روی هر شخصیت کلیک کن تا داستانش رو ببینی
+        </p>
+
+    </header>
+
+
+    <!-- کارت شخصیت‌ها -->
+
+    <main class="characters-grid">
+
+
+        <!-- MAX -->
+
+        <div
+            class="character-card"
+            onclick="openCharacter('max')"
+        >
+
+            <div class="character-image">
+
+                <img
+                    src="img/max.jpg"
+                    alt="Max"
+                >
+
+            </div>
+
+            <div class="character-info">
+
+                <div class="character-number">
+                    01
+                </div>
+
+                <h2>
+                    MAX
+                </h2>
+
+                <p>
+                    MADMAX
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEVE -->
+
+        <div
+            class="character-card"
+            onclick="openCharacter('steve')"
+        >
+
+            <div class="character-image">
+
+                <img
+                    src="img/steve.jpg"
+                    alt="Steve"
+                >
+
+            </div>
+
+            <div class="character-info">
+
+                <div class="character-number">
+                    02
+                </div>
+
+                <h2>
+                    STEVE
+                </h2>
+
+                <p>
+                    THE HAIR
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DUSTIN -->
+
+        <div
+            class="character-card"
+            onclick="openCharacter('dustin')"
+        >
+
+            <div class="character-image">
+
+                <img
+                    src="img/dustin.jpg"
+                    alt="Dustin"
+                >
+
+            </div>
+
+            <div class="character-info">
+
+                <div class="character-number">
+                    03
+                </div>
+
+                <h2>
+                    DUSTIN
+                </h2>
+
+                <p>
+                    THE GENIUS
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LUCAS -->
+
+        <div
+            class="character-card"
+            onclick="openCharacter('lucas')"
+        >
+
+            <div class="character-image">
+
+                <img
+                    src="img/lucas.jpg"
+                    alt="Lucas"
+                >
+
+            </div>
+
+            <div class="character-info">
+
+                <div class="character-number">
+                    04
+                </div>
+
+                <h2>
+                    LUCAS
+                </h2>
+
+                <p>
+                    THE SURVIVOR
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ELEVEN -->
+
+        <div
+            class="character-card"
+            onclick="openCharacter('eleven')"
+        >
+
+            <div class="character-image">
+
+                <img
+                    src="img/eleven.jpg"
+                    alt="Eleven"
+                >
+
+            </div>
+
+            <div class="character-info">
+
+                <div class="character-number">
+                    05
+                </div>
+
+                <h2>
+                    ELEVEN
+                </h2>
+
+                <p>
+                    011
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- پنجره اطلاعات -->
+
+    <div
+        id="characterModal"
+        class="character-modal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="close-button"
+                onclick="closeCharacter()"
+            >
+                ×
+            </button>
+
+
+            <div
+                id="modalImage"
+                class="modal-image"
+            >
+            </div>
+
+
+            <div class="modal-content">
+
+                <div
+                    id="modalNumber"
+                    class="modal-number"
+                >
+                </div>
+
+
+                <h2 id="modalName">
+                </h2>
+
+
+                <div class="modal-line"></div>
+
+
+                <h3 id="modalNickname">
+                </h3>
+
+
+                <p id="modalDescription">
+                </p>
+
+
+                <div class="modal-footer">
+
+                    HAWKINS • INDIANA
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+<div class="page-buttons">
+<div class="page-buttons">
+
+    <button
+        class="secret-button"
+        onclick="goMessage()"
+    >
+        <span class="secret-icon">✦</span>
+        OPEN THE SECRET
+        <span class="secret-icon">✦</span>
+    </button>
+
+
+    <button
+        class="home-button"
+        onclick="goHome()"
+    >
+        ← صفحه اول
+    </button>
+
+</div>
+
+
+
+    <button
+        class="home-button"
+        onclick="goHome()"
+    >
+        ← صفحه اول
+    </button>
+
+</div>
+
+
+
+</div>
+
+
+<script>
+
+
+const characters = {
+
+    max: {
+
+        name: "MAX MAYFIELD",
+
+        number: "01",
+
+        nickname: "MADMAX",
+
+        image: "img/max.jpg",
+
+        description:
+        "مکس میفیلد، دختری مستقل و سرسخت است که به هاوکینز می‌آید و به گروه دوستان نزدیک می‌شود. علاقه‌ی زیادش به اسکیت و بازی‌های آرکید باعث می‌شود لقب MADMAX را برای خودش داشته باشد. مکس در طول داستان با اتفاقات عجیب هاوکینز روبه‌رو می‌شود و بارها شجاعت و وفاداری خودش را نشان می‌دهد."
+
+    },
+
+
+    steve: {
+
+        name: "STEVE HARRINGTON",
+
+        number: "02",
+
+        nickname: "THE HAIR",
+
+        image: "img/steve.jpg",
+
+        description:
+        "استیو هرینگتون در ابتدا بیشتر به عنوان یکی از بچه‌های محبوب دبیرستان شناخته می‌شود، اما اتفاقات هاوکینز مسیر زندگی او را تغییر می‌دهد. استیو کم‌کم به یکی از محافظان گروه تبدیل می‌شود و بارها برای دوستانش مقابل خطرات دنیای وارونه می‌ایستد. رابطه‌ی دوستانه‌اش با داستین یکی از بخش‌های محبوب داستان است."
+
+    },
+
+
+    dustin: {
+
+        name: "DUSTIN HENDERSON",
+
+        number: "03",
+
+        nickname: "THE GENIUS",
+
+        image: "img/dustin.jpg",
+
+        description:
+        "داستین هندرسون یکی از باهوش‌ترین و بامزه‌ترین اعضای گروه است. علاقه‌ی زیاد او به علم، فناوری و Dungeons & Dragons باعث می‌شود در بسیاری از اتفاقات نقش مهمی داشته باشد. داستین معمولاً با استفاده از منطق و دانشش به دوستانش کمک می‌کند و دوستی نزدیکش با استیو به یکی از رابطه‌های دوست‌داشتنی سریال تبدیل می‌شود."
+
+    },
+
+
+    lucas: {
+
+        name: "LUCAS SINCLAIR",
+
+        number: "04",
+
+        nickname: "THE SURVIVOR",
+
+        image: "img/lucas.jpg",
+
+        description:
+        "لوکاس سینکلر یکی از اعضای اصلی گروه دوستان هاوکینز است. او شخصیتی منطقی، شجاع و عمل‌گرا دارد و معمولاً در موقعیت‌های خطرناک سعی می‌کند تصمیم‌های حساب‌شده بگیرد. لوکاس در طول داستان بارها برای دوستانش ایستادگی می‌کند و بخش مهمی از گروه هاوکینز باقی می‌ماند."
+
+    },
+
+
+    eleven: {
+
+        name: "ELEVEN",
+
+        number: "011",
+
+        nickname: "THE GIRL WITH POWERS",
+
+        image: "img/eleven.jpg",
+
+        description:
+        "الون دختری با گذشته‌ای مرموز و توانایی‌های ذهنی قدرتمند است. او پس از فرار از آزمایشگاه وارد دنیای مایک، داستین و لوکاس می‌شود و زندگی‌اش با اتفاقات عجیب هاوکینز گره می‌خورد. الون برای محافظت از دوستانش بارها با موجودات و تهدیدهای دنیای وارونه روبه‌رو می‌شود."
+
+    }
+
+};
+
+
+
+function openCharacter(character) {
+
+    const data = characters[character];
+
+
+    document.getElementById("modalName").innerText =
+        data.name;
+
+
+    document.getElementById("modalNumber").innerText =
+        data.number;
+
+
+    document.getElementById("modalNickname").innerText =
+        data.nickname;
+
+
+    document.getElementById("modalDescription").innerText =
+        data.description;
+
+
+    document.getElementById("modalImage").style.backgroundImage =
+        `url('${data.image}')`;
+
+
+    document.getElementById("characterModal").classList.add("active");
+
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+
+function closeCharacter() {
+
+    document
+        .getElementById("characterModal")
+        .classList.remove("active");
+
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+
+function goHome() {
+
+    window.location.href = "index.html";
+
+}
+
+
+function goMessage() {
+
+    window.location.href = "message.html";
+
+}
+
+
+
+document
+    .getElementById("characterModal")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+
+            closeCharacter();
+
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+
+</html>
